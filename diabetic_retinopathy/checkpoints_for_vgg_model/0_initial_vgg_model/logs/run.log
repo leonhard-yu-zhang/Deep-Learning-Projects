@@ -1,0 +1,344 @@
+------------ Preparing dataset idrid... -----------
+Binary classification. Class 1 : labels 0,1; class 2: labels 2 and up
+Test set -
+0    39
+1    64
+Splitting the original training set into training/validation set (8:2)
+imbalanced training set before oversampling -
+0    124
+1    206
+Balanced training set after oversampling -
+0    206
+1    206
+Validation set -
+0    30
+1    53
+------------ Checking the preprocessing ------------
+Model: "vgg_like"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 256, 256, 3)]     0         
+                                                                 
+ conv2d (Conv2D)             (None, 256, 256, 16)      448       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 256, 256, 16)      2320      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 128, 128, 16)     0         
+ )                                                               
+                                                                 
+ conv2d_2 (Conv2D)           (None, 128, 128, 64)      9280      
+                                                                 
+ conv2d_3 (Conv2D)           (None, 128, 128, 64)      36928     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 64, 64, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_4 (Conv2D)           (None, 64, 64, 128)       73856     
+                                                                 
+ conv2d_5 (Conv2D)           (None, 64, 64, 128)       147584    
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 32, 32, 128)      0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 32, 32, 256)       295168    
+                                                                 
+ conv2d_7 (Conv2D)           (None, 32, 32, 256)       590080    
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 16, 16, 256)      0         
+ 2D)                                                             
+                                                                 
+ global_average_pooling2d (G  (None, 256)              0         
+ lobalAveragePooling2D)                                          
+                                                                 
+ dense (Dense)               (None, 64)                16448     
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_1 (Dense)             (None, 2)                 130       
+                                                                 
+=================================================================
+Total params: 1,172,242
+Trainable params: 1,172,242
+Non-trainable params: 0
+_________________________________________________________________
+
+------------ Starting training ----------
+initializing from scratch.
+
+Step 100, Loss: 0.6926432847976685, Accuracy: 52.28125, val Loss: 0.696435272693634, val Accuracy: 36.14457702636719, confusion_matrix: [[30.  0.]
+ [53.  0.]]
+Saved better checkpoint for step 100: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-1.
+Step 200, Loss: 0.6766324639320374, Accuracy: 59.750003814697266, val Loss: 0.5847158432006836, val Accuracy: 71.08433532714844, confusion_matrix: [[19. 11.]
+ [13. 40.]]
+Saved better checkpoint for step 200: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-2.
+Step 300, Loss: 0.6598089337348938, Accuracy: 63.3125, val Loss: 0.6257936954498291, val Accuracy: 68.67469787597656, confusion_matrix: [[23.  7.]
+ [19. 34.]]
+Step 400, Loss: 0.6445648670196533, Accuracy: 65.40625, val Loss: 0.5747203826904297, val Accuracy: 68.67469787597656, confusion_matrix: [[21.  9.]
+ [17. 36.]]
+Step 500, Loss: 0.6306321620941162, Accuracy: 67.8125, val Loss: 0.5926187634468079, val Accuracy: 68.67469787597656, confusion_matrix: [[26.  4.]
+ [22. 31.]]
+Step 600, Loss: 0.6242681741714478, Accuracy: 67.9375, val Loss: 0.5200950503349304, val Accuracy: 77.10842895507812, confusion_matrix: [[26.  4.]
+ [15. 38.]]
+Saved better checkpoint for step 600: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-3.
+Step 700, Loss: 0.6087847352027893, Accuracy: 69.4375, val Loss: 0.46737948060035706, val Accuracy: 75.90361022949219, confusion_matrix: [[22.  8.]
+ [12. 41.]]
+Step 800, Loss: 0.5950314998626709, Accuracy: 70.65625, val Loss: 0.4598044455051422, val Accuracy: 78.3132553100586, confusion_matrix: [[23.  7.]
+ [11. 42.]]
+Saved better checkpoint for step 800: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-4.
+Step 900, Loss: 0.5667527914047241, Accuracy: 71.75, val Loss: 0.5164661407470703, val Accuracy: 74.69879150390625, confusion_matrix: [[29.  1.]
+ [20. 33.]]
+Step 1000, Loss: 0.5502200126647949, Accuracy: 72.21875, val Loss: 0.4125230014324188, val Accuracy: 77.10842895507812, confusion_matrix: [[27.  3.]
+ [16. 37.]]
+Step 1100, Loss: 0.4975765645503998, Accuracy: 75.09375, val Loss: 0.41967809200286865, val Accuracy: 75.90361022949219, confusion_matrix: [[24.  6.]
+ [14. 39.]]
+Step 1200, Loss: 0.45422568917274475, Accuracy: 78.09375, val Loss: 0.3810112774372101, val Accuracy: 73.49397277832031, confusion_matrix: [[26.  4.]
+ [18. 35.]]
+Step 1300, Loss: 0.40864452719688416, Accuracy: 81.5, val Loss: 0.4110378324985504, val Accuracy: 79.51807403564453, confusion_matrix: [[22.  8.]
+ [ 9. 44.]]
+Saved better checkpoint for step 1300: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-5.
+Step 1400, Loss: 0.37567824125289917, Accuracy: 84.03125, val Loss: 0.3794426918029785, val Accuracy: 77.10842895507812, confusion_matrix: [[30.  0.]
+ [19. 34.]]
+Step 1500, Loss: 0.3387640416622162, Accuracy: 85.90625, val Loss: 0.4654736816883087, val Accuracy: 74.69879150390625, confusion_matrix: [[30.  0.]
+ [21. 32.]]
+Step 1600, Loss: 0.328688383102417, Accuracy: 87.0625, val Loss: 0.30648961663246155, val Accuracy: 81.9277114868164, confusion_matrix: [[26.  4.]
+ [11. 42.]]
+Saved better checkpoint for step 1600: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-6.
+Step 1700, Loss: 0.31353896856307983, Accuracy: 87.375, val Loss: 0.3678809106349945, val Accuracy: 81.9277114868164, confusion_matrix: [[30.  0.]
+ [15. 38.]]
+Step 1800, Loss: 0.2923055589199066, Accuracy: 88.65625, val Loss: 0.3903520107269287, val Accuracy: 80.72289276123047, confusion_matrix: [[29.  1.]
+ [15. 38.]]
+Step 1900, Loss: 0.2745863199234009, Accuracy: 89.09375, val Loss: 0.3725745677947998, val Accuracy: 84.33734893798828, confusion_matrix: [[28.  2.]
+ [11. 42.]]
+Step 2000, Loss: 0.266101598739624, Accuracy: 90.21875, val Loss: 0.404790997505188, val Accuracy: 79.51807403564453, confusion_matrix: [[27.  3.]
+ [14. 39.]]
+Step 2100, Loss: 0.2629653215408325, Accuracy: 89.34375, val Loss: 0.3782021701335907, val Accuracy: 80.72289276123047, confusion_matrix: [[28.  2.]
+ [14. 39.]]
+Step 2200, Loss: 0.24714021384716034, Accuracy: 90.1875, val Loss: 0.3902571499347687, val Accuracy: 80.72289276123047, confusion_matrix: [[28.  2.]
+ [14. 39.]]
+Step 2300, Loss: 0.2496362328529358, Accuracy: 90.21875, val Loss: 0.289021760225296, val Accuracy: 86.74699401855469, confusion_matrix: [[25.  5.]
+ [ 6. 47.]]
+Saved better checkpoint for step 2300: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-7.
+Step 2400, Loss: 0.21104533970355988, Accuracy: 91.84375, val Loss: 0.32048940658569336, val Accuracy: 84.33734893798828, confusion_matrix: [[25.  5.]
+ [ 8. 45.]]
+Step 2500, Loss: 0.1857079565525055, Accuracy: 93.21875, val Loss: 0.32142534852027893, val Accuracy: 87.95181274414062, confusion_matrix: [[25.  5.]
+ [ 5. 48.]]
+Step 2600, Loss: 0.18862086534500122, Accuracy: 93.0625, val Loss: 0.33709216117858887, val Accuracy: 86.74699401855469, confusion_matrix: [[28.  2.]
+ [ 9. 44.]]
+Step 2700, Loss: 0.1719731092453003, Accuracy: 93.65625, val Loss: 0.3166007399559021, val Accuracy: 85.54216766357422, confusion_matrix: [[28.  2.]
+ [10. 43.]]
+Step 2800, Loss: 0.18009306490421295, Accuracy: 93.5, val Loss: 0.38104304671287537, val Accuracy: 84.33734893798828, confusion_matrix: [[26.  4.]
+ [ 9. 44.]]
+Step 2900, Loss: 0.14832836389541626, Accuracy: 94.4375, val Loss: 0.3217583894729614, val Accuracy: 87.95181274414062, confusion_matrix: [[26.  4.]
+ [ 6. 47.]]
+Step 3000, Loss: 0.1551654040813446, Accuracy: 94.21875, val Loss: 0.35236120223999023, val Accuracy: 85.54216766357422, confusion_matrix: [[24.  6.]
+ [ 6. 47.]]
+Step 3100, Loss: 0.11786011606454849, Accuracy: 95.71875, val Loss: 0.3671886920928955, val Accuracy: 85.54216766357422, confusion_matrix: [[25.  5.]
+ [ 7. 46.]]
+Step 3200, Loss: 0.1215190514922142, Accuracy: 95.875, val Loss: 0.4008493423461914, val Accuracy: 87.95181274414062, confusion_matrix: [[25.  5.]
+ [ 5. 48.]]
+Step 3300, Loss: 0.1463165432214737, Accuracy: 94.875, val Loss: 0.37252411246299744, val Accuracy: 85.54216766357422, confusion_matrix: [[24.  6.]
+ [ 6. 47.]]
+Step 3400, Loss: 0.11565737426280975, Accuracy: 96.03125, val Loss: 0.4242466986179352, val Accuracy: 83.13253021240234, confusion_matrix: [[27.  3.]
+ [11. 42.]]
+Step 3500, Loss: 0.13958610594272614, Accuracy: 94.96875, val Loss: 0.34077349305152893, val Accuracy: 86.74699401855469, confusion_matrix: [[27.  3.]
+ [ 8. 45.]]
+Step 3600, Loss: 0.1220237985253334, Accuracy: 95.84375, val Loss: 0.37084150314331055, val Accuracy: 87.95181274414062, confusion_matrix: [[24.  6.]
+ [ 4. 49.]]
+Step 3700, Loss: 0.11591076850891113, Accuracy: 95.4375, val Loss: 0.39793238043785095, val Accuracy: 87.95181274414062, confusion_matrix: [[29.  1.]
+ [ 9. 44.]]
+Step 3800, Loss: 0.08457234501838684, Accuracy: 97.0, val Loss: 0.4074832499027252, val Accuracy: 83.13253021240234, confusion_matrix: [[24.  6.]
+ [ 8. 45.]]
+Step 3900, Loss: 0.06472618877887726, Accuracy: 97.4375, val Loss: 0.388836532831192, val Accuracy: 90.36144256591797, confusion_matrix: [[24.  6.]
+ [ 2. 51.]]
+Step 4000, Loss: 0.09673480689525604, Accuracy: 96.65625, val Loss: 0.4606646001338959, val Accuracy: 84.33734893798828, confusion_matrix: [[27.  3.]
+ [10. 43.]]
+Step 4100, Loss: 0.06595756858587265, Accuracy: 97.90625, val Loss: 0.3510516583919525, val Accuracy: 87.95181274414062, confusion_matrix: [[25.  5.]
+ [ 5. 48.]]
+Step 4200, Loss: 0.07198991626501083, Accuracy: 97.34375, val Loss: 0.4438372552394867, val Accuracy: 87.95181274414062, confusion_matrix: [[25.  5.]
+ [ 5. 48.]]
+Step 4300, Loss: 0.05920178070664406, Accuracy: 98.1875, val Loss: 0.38311782479286194, val Accuracy: 86.74699401855469, confusion_matrix: [[25.  5.]
+ [ 6. 47.]]
+Step 4400, Loss: 0.06481820344924927, Accuracy: 98.0, val Loss: 0.6006380915641785, val Accuracy: 85.54216766357422, confusion_matrix: [[20. 10.]
+ [ 2. 51.]]
+Step 4500, Loss: 0.07393287122249603, Accuracy: 97.4375, val Loss: 0.47099801898002625, val Accuracy: 87.95181274414062, confusion_matrix: [[28.  2.]
+ [ 8. 45.]]
+Step 4600, Loss: 0.07033898681402206, Accuracy: 97.34375, val Loss: 0.4063446521759033, val Accuracy: 85.54216766357422, confusion_matrix: [[24.  6.]
+ [ 6. 47.]]
+Step 4700, Loss: 0.061055269092321396, Accuracy: 97.90625, val Loss: 0.4119161069393158, val Accuracy: 86.74699401855469, confusion_matrix: [[24.  6.]
+ [ 5. 48.]]
+Step 4800, Loss: 0.03885680437088013, Accuracy: 98.53125, val Loss: 0.4468018710613251, val Accuracy: 89.15663146972656, confusion_matrix: [[26.  4.]
+ [ 5. 48.]]
+Step 4900, Loss: 0.05062821879982948, Accuracy: 98.34375, val Loss: 0.358638733625412, val Accuracy: 89.15663146972656, confusion_matrix: [[26.  4.]
+ [ 5. 48.]]
+Step 5000, Loss: 0.04783446341753006, Accuracy: 98.6875, val Loss: 0.4200875461101532, val Accuracy: 85.54216766357422, confusion_matrix: [[25.  5.]
+ [ 7. 46.]]
+Finished training after 5000 steps. Best val loss: 0.289021760225296, best val accuracy: 0.8674699068069458 
+
+------------ Starting evaluation ------------
+restore checkpoint: 
+D:\Pycharm\PycharmProjects\only-for-self-study-dl-lab\experiments\run_2021-12-10-00-25-03-476029\ckpts\train\ckpt-7
+
+------ Evaluation statistics
+    Image name  Retinopathy grade  Prediction
+28   IDRiD_029                  0           0
+29   IDRiD_030                  0           0
+36   IDRiD_037                  0           0
+37   IDRiD_038                  0           0
+38   IDRiD_039                  0           0
+42   IDRiD_043                  0           0
+43   IDRiD_044                  0           0
+44   IDRiD_045                  0           0
+49   IDRiD_050                  0           0
+51   IDRiD_052                  0           0
+53   IDRiD_054                  0           0
+55   IDRiD_056                  0           0
+57   IDRiD_058                  0           0
+62   IDRiD_063                  0           0
+67   IDRiD_068                  0           0
+68   IDRiD_069                  0           0
+70   IDRiD_071                  0           0
+72   IDRiD_073                  0           0
+73   IDRiD_074                  0           0
+76   IDRiD_077                  0           0
+79   IDRiD_080                  0           0
+84   IDRiD_085                  0           0
+89   IDRiD_090                  0           0
+91   IDRiD_092                  0           0
+92   IDRiD_093                  0           0
+94   IDRiD_095                  0           0
+95   IDRiD_096                  0           0
+96   IDRiD_097                  0           0
+97   IDRiD_098                  0           0
+98   IDRiD_099                  0           0
+40   IDRiD_041                  0           1
+46   IDRiD_047                  0           1
+54   IDRiD_055                  0           1
+69   IDRiD_070                  0           1
+74   IDRiD_075                  0           1
+77   IDRiD_078                  0           1
+93   IDRiD_094                  0           1
+100  IDRiD_101                  0           1
+102  IDRiD_103                  0           1
+1    IDRiD_002                  1           0
+3    IDRiD_004                  1           0
+4    IDRiD_005                  1           0
+5    IDRiD_006                  1           0
+11   IDRiD_012                  1           0
+59   IDRiD_060                  1           0
+75   IDRiD_076                  1           0
+78   IDRiD_079                  1           0
+81   IDRiD_082                  1           0
+83   IDRiD_084                  1           0
+85   IDRiD_086                  1           0
+0    IDRiD_001                  1           1
+2    IDRiD_003                  1           1
+6    IDRiD_007                  1           1
+7    IDRiD_008                  1           1
+8    IDRiD_009                  1           1
+9    IDRiD_010                  1           1
+10   IDRiD_011                  1           1
+12   IDRiD_013                  1           1
+13   IDRiD_014                  1           1
+14   IDRiD_015                  1           1
+15   IDRiD_016                  1           1
+16   IDRiD_017                  1           1
+17   IDRiD_018                  1           1
+18   IDRiD_019                  1           1
+19   IDRiD_020                  1           1
+20   IDRiD_021                  1           1
+21   IDRiD_022                  1           1
+22   IDRiD_023                  1           1
+23   IDRiD_024                  1           1
+24   IDRiD_025                  1           1
+25   IDRiD_026                  1           1
+26   IDRiD_027                  1           1
+27   IDRiD_028                  1           1
+30   IDRiD_031                  1           1
+31   IDRiD_032                  1           1
+32   IDRiD_033                  1           1
+33   IDRiD_034                  1           1
+34   IDRiD_035                  1           1
+35   IDRiD_036                  1           1
+39   IDRiD_040                  1           1
+41   IDRiD_042                  1           1
+45   IDRiD_046                  1           1
+47   IDRiD_048                  1           1
+48   IDRiD_049                  1           1
+50   IDRiD_051                  1           1
+52   IDRiD_053                  1           1
+56   IDRiD_057                  1           1
+58   IDRiD_059                  1           1
+60   IDRiD_061                  1           1
+61   IDRiD_062                  1           1
+63   IDRiD_064                  1           1
+64   IDRiD_065                  1           1
+65   IDRiD_066                  1           1
+66   IDRiD_067                  1           1
+71   IDRiD_072                  1           1
+80   IDRiD_081                  1           1
+82   IDRiD_083                  1           1
+86   IDRiD_087                  1           1
+87   IDRiD_088                  1           1
+88   IDRiD_089                  1           1
+90   IDRiD_091                  1           1
+99   IDRiD_100                  1           1
+101  IDRiD_102                  1           1
+Confusion matrix: 
+[[30.  9.]
+ [11. 53.]]
+Precision: [0.73170733 0.8548387 ], Sensitivity: [0.7692308 0.828125 ], F1: [0.74999994 0.84126985]
+------------ Starting visualization for images in test set -------------
+Choose IDRiD_001 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_002 with label 1, prediction 0
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_003 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_004 with label 1, prediction 0
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_005 with label 1, prediction 0
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_007 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_008 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_009 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_010 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_011 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_012 with label 1, prediction 0
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_013 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_014 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_015 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Choose IDRiD_016 with label 1, prediction 1
+GradGAM
+The last convolutional layer is conv2d_7
+Exit the visualization

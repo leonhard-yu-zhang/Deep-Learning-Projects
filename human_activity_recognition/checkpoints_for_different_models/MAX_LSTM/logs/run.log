@@ -1,0 +1,397 @@
+------------ run folder /home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470 ------------
+------------ Preparing dataset hapt... -----------
+Model: "sequence_LSTM_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 250, 6)]          0         
+                                                                 
+ lstm (LSTM)                 (None, 250, 256)          269312    
+                                                                 
+ batch_normalization (BatchN  (None, 250, 256)         1024      
+ ormalization)                                                   
+                                                                 
+ activation (Activation)     (None, 250, 256)          0         
+                                                                 
+ dense (Dense)               (None, 250, 128)          32896     
+                                                                 
+ batch_normalization_1 (Batc  (None, 250, 128)         512       
+ hNormalization)                                                 
+                                                                 
+ activation_1 (Activation)   (None, 250, 128)          0         
+                                                                 
+ dropout (Dropout)           (None, 250, 128)          0         
+                                                                 
+ lstm_1 (LSTM)               (None, 250, 128)          131584    
+                                                                 
+ batch_normalization_2 (Batc  (None, 250, 128)         512       
+ hNormalization)                                                 
+                                                                 
+ activation_2 (Activation)   (None, 250, 128)          0         
+                                                                 
+ dense_1 (Dense)             (None, 250, 64)           8256      
+                                                                 
+ batch_normalization_3 (Batc  (None, 250, 64)          256       
+ hNormalization)                                                 
+                                                                 
+ activation_3 (Activation)   (None, 250, 64)           0         
+                                                                 
+ dropout_1 (Dropout)         (None, 250, 64)           0         
+                                                                 
+ lstm_2 (LSTM)               (None, 250, 64)           33024     
+                                                                 
+ batch_normalization_4 (Batc  (None, 250, 64)          256       
+ hNormalization)                                                 
+                                                                 
+ activation_4 (Activation)   (None, 250, 64)           0         
+                                                                 
+ global_max_pooling1d (Globa  (None, 64)               0         
+ lMaxPooling1D)                                                  
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ batch_normalization_5 (Batc  (None, 32)               128       
+ hNormalization)                                                 
+                                                                 
+ activation_5 (Activation)   (None, 32)                0         
+                                                                 
+ dropout_2 (Dropout)         (None, 32)                0         
+                                                                 
+ dense_3 (Dense)             (None, 6)                 198       
+                                                                 
+=================================================================
+Total params: 480,038
+Trainable params: 478,694
+Non-trainable params: 1,344
+_________________________________________________________________
+------------ Train and evaluate ------------
+
+------------ Starting training ----------
+initializing from scratch.
+
+Step 100, train_loss: 0.9895783066749573, train_accuracy: 64.8543701171875, val_loss: 1.6906368732452393, val_accuracy: 20.53388023376465, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [66.  0.  0.  0.  0.  0.]
+ [43.  0. 14.  0.  0.  0.]
+ [78.  0. 10.  0.  0.  0.]
+ [91.  0.  0.  0.  0.  0.]
+ [16.  0. 83.  0.  0.  0.]]
+Saved better checkpoint for step 100: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-1.
+Step 200, train_loss: 0.462552934885025, train_accuracy: 88.62864685058594, val_loss: 1.2724609375, val_accuracy: 44.96919631958008, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [50. 16.  0.  0.  0.  0.]
+ [24.  0. 33.  0.  0.  0.]
+ [40.  0. 35.  1.  0. 12.]
+ [90.  0.  1.  0.  0.  0.]
+ [16.  0.  0.  0.  0. 83.]]
+Saved better checkpoint for step 200: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-2.
+Step 300, train_loss: 0.30496838688850403, train_accuracy: 93.32793426513672, val_loss: 0.6744361519813538, val_accuracy: 82.34085845947266, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 6. 60.  0.  0.  0.  0.]
+ [ 7.  0. 50.  0.  0.  0.]
+ [ 3.  0.  0. 71. 14.  0.]
+ [43.  0.  1. 12. 35.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 300: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-3.
+Step 400, train_loss: 0.24049364030361176, train_accuracy: 94.69660186767578, val_loss: 0.4055347442626953, val_accuracy: 90.14373779296875, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 2. 64.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 8.  0.  1. 17. 65.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 400: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-4.
+Step 500, train_loss: 0.19641923904418945, train_accuracy: 95.50970458984375, val_loss: 0.34222474694252014, val_accuracy: 91.58110809326172, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 2.  0.  1. 17. 71.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 500: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-5.
+Step 600, train_loss: 0.17350319027900696, train_accuracy: 95.908447265625, val_loss: 0.3187147080898285, val_accuracy: 92.19712829589844, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 16. 75.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 600: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-6.
+Step 700, train_loss: 0.15378214418888092, train_accuracy: 96.31877136230469, val_loss: 0.329476535320282, val_accuracy: 92.4024658203125, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 16. 75.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 700: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-7.
+Step 800, train_loss: 0.1387852132320404, train_accuracy: 96.7152099609375, val_loss: 0.3518301844596863, val_accuracy: 92.4024658203125, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 0.  0.  1. 16. 74.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 900, train_loss: 0.1285163164138794, train_accuracy: 96.9131088256836, val_loss: 0.3312239646911621, val_accuracy: 92.60780334472656, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 14. 77.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 900: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-8.
+Step 1000, train_loss: 0.11686577647924423, train_accuracy: 97.2613296508789, val_loss: 0.3289654850959778, val_accuracy: 92.81314086914062, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  1. 12. 78.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 1000: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-9.
+Step 1100, train_loss: 0.11161081492900848, train_accuracy: 97.3543701171875, val_loss: 0.32780593633651733, val_accuracy: 93.01847839355469, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 12. 79.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 1100: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-10.
+Step 1200, train_loss: 0.10453224927186966, train_accuracy: 97.45999908447266, val_loss: 0.3280653953552246, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 1200: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-11.
+Step 1300, train_loss: 0.09470623731613159, train_accuracy: 97.79935455322266, val_loss: 0.35161203145980835, val_accuracy: 93.01847839355469, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 0.  0.  0. 13. 78.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 1400, train_loss: 0.09052497893571854, train_accuracy: 97.86003112792969, val_loss: 0.3375251293182373, val_accuracy: 92.60780334472656, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 0.  0.  0. 12. 79.  0.]
+ [ 3.  0.  0.  0.  0. 96.]]
+Step 1500, train_loss: 0.08485671877861023, train_accuracy: 98.07170867919922, val_loss: 0.3585304617881775, val_accuracy: 92.60780334472656, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 13. 78.  0.]
+ [ 0.  1.  0.  0.  0. 98.]]
+Step 1600, train_loss: 0.07966196537017822, train_accuracy: 98.1634292602539, val_loss: 0.35565122961997986, val_accuracy: 93.22382354736328, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  1.  0.  0.  0. 98.]]
+Step 1700, train_loss: 0.07638940960168839, train_accuracy: 98.1634292602539, val_loss: 0.3495936095714569, val_accuracy: 93.22382354736328, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 69. 19.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  1.  0.  0.  0. 98.]]
+Step 1800, train_loss: 0.07021346688270569, train_accuracy: 98.4119873046875, val_loss: 0.35422030091285706, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Saved better checkpoint for step 1800: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-12.
+Step 1900, train_loss: 0.06846868246793747, train_accuracy: 98.458740234375, val_loss: 0.35772380232810974, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2000, train_loss: 0.06093212589621544, train_accuracy: 98.75404357910156, val_loss: 0.365662544965744, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  1.  0.  0.  0. 98.]]
+Step 2100, train_loss: 0.061050042510032654, train_accuracy: 98.63075256347656, val_loss: 0.3734332323074341, val_accuracy: 93.22382354736328, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 1.  2. 54.  0.  0.  0.]
+ [ 0.  0.  0. 69. 19.  0.]
+ [ 0.  0.  0. 11. 80.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2200, train_loss: 0.05735335499048233, train_accuracy: 98.73381805419922, val_loss: 0.3700450658798218, val_accuracy: 92.81314086914062, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 3.  0.  0.  0.  0. 96.]]
+Step 2300, train_loss: 0.053515974432229996, train_accuracy: 98.91585540771484, val_loss: 0.36777156591415405, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2400, train_loss: 0.051356490701436996, train_accuracy: 98.9507827758789, val_loss: 0.358191579580307, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2500, train_loss: 0.05060896277427673, train_accuracy: 98.91990661621094, val_loss: 0.3745019733905792, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2600, train_loss: 0.04600222408771515, train_accuracy: 99.0938491821289, val_loss: 0.38274121284484863, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2700, train_loss: 0.04325195774435997, train_accuracy: 99.10066986083984, val_loss: 0.37428322434425354, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2800, train_loss: 0.04408075660467148, train_accuracy: 99.03317260742188, val_loss: 0.3470231294631958, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 2900, train_loss: 0.040342677384614944, train_accuracy: 99.17071533203125, val_loss: 0.37615057826042175, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3000, train_loss: 0.038206156343221664, train_accuracy: 99.17764282226562, val_loss: 0.3612349033355713, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 1. 65.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 69. 19.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3100, train_loss: 0.03879522159695625, train_accuracy: 99.2111587524414, val_loss: 0.37973326444625854, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 1.  0.  0. 10. 80.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3200, train_loss: 0.03526332229375839, train_accuracy: 99.27588653564453, val_loss: 0.39866477251052856, val_accuracy: 93.42916107177734, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 69. 19.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3300, train_loss: 0.03254535794258118, train_accuracy: 99.35183715820312, val_loss: 0.37219634652137756, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3400, train_loss: 0.03421184420585632, train_accuracy: 99.27993774414062, val_loss: 0.3974878489971161, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3500, train_loss: 0.03069094941020012, train_accuracy: 99.42961120605469, val_loss: 0.39832359552383423, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3600, train_loss: 0.029577620327472687, train_accuracy: 99.41259765625, val_loss: 0.399395227432251, val_accuracy: 92.60780334472656, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 1.  0.  0. 14. 76.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3700, train_loss: 0.028400398790836334, train_accuracy: 99.39724731445312, val_loss: 0.39822572469711304, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3800, train_loss: 0.030715152621269226, train_accuracy: 99.34465789794922, val_loss: 0.4051685929298401, val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0.  9. 82.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 3900, train_loss: 0.026881525292992592, train_accuracy: 99.40044403076172, val_loss: 0.5432567000389099, val_accuracy: 91.1704330444336, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 22. 69.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+Step 4000, train_loss: 0.030515065416693687, train_accuracy: 99.28802490234375, val_loss: 0.3940480351448059, val_accuracy: 93.6344985961914, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 3.  0. 54.  0.  0.  0.]
+ [ 0.  0.  0. 70. 18.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+
+Finished training after 4000 steps. Best val_accuracy: 93.83983612060547, confusion_matrix:
+[[86.  0.  0.  0.  0.  0.]
+ [ 0. 66.  0.  0.  0.  0.]
+ [ 2.  1. 54.  0.  0.  0.]
+ [ 0.  0.  0. 71. 17.  0.]
+ [ 0.  0.  0. 10. 81.  0.]
+ [ 0.  0.  0.  0.  0. 99.]]
+
+------------ Starting evaluation ------------
+restore checkpoint: 
+/home/RUS_CIP/st175322/dl-lab-21w-team14/experiments/run_2022-01-21-17-17-41-876470/ckpts/train/ckpt-12
+
+------ Evaluation statistics
+Confusion matrix: 
+[[172.   0.   2.   0.   0.   0.]
+ [  0. 122.   0.   0.   0.   0.]
+ [  1.   1. 107.   0.   0.   0.]
+ [  0.   0.   0. 177.   6.   0.]
+ [  0.   0.   0.  10. 183.   0.]
+ [  0.   0.   0.   0.   0. 202.]]
+Precision: [0.99421966 0.9918699  0.98165137 0.9465241  0.96825397 1.        ], Sensitivity: [0.9885057  1.         0.98165137 0.9672131  0.9481865  1.        ], F1: [0.99135447 0.9959184  0.98165137 0.9567568  0.95811516 1.        ]
