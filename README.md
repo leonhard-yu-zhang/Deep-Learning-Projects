@@ -61,7 +61,7 @@ After hyperparameter tuning for VGG-like model, the best two results of test acc
 |                F1-Score                 |     [0.55 0.79]      |      [0.63 0.80]      |
 
 Deep visualization using Grad-CAM and guided Grad-GAM shows learnt features:
-https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/Yu_Zhang/results_for_two_projects/results_for_diabetic_retinopathy/deep_visualization_using_GradCAM_und_guided_GradCAM.jpg
+![image](https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/Yu_Zhang/results_for_two_projects/results_for_diabetic_retinopathy/deep_visualization_using_GradCAM_und_guided_GradCAM.jpg)
 
 # Project 2 Human activity recognition
 6-classification, Sequence LSTM/GRU model with GlobalMaxPooling/GlobalAveragePooling layer
@@ -118,12 +118,12 @@ Hyperparameter tuning for LSTM and GRU model:
 GRU model with GlobalMaxPooling layer has the best test accuracy: 98.3%.
 
 Visualize the ground truth:
-https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/visualization_ground_truth.png
+![image](https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/visualization_ground_truth.png)
 
 Visualize the prediction:
-https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/visualization_predict.png
+![image](https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/visualization_predict.png)
 
 Confusion matrix:
-https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/evaluation_confusion_matrix_for_test_set.png
+![image](https://github.com/leonhard-yu-zhang/Deep-Learning-Projects/blob/master/results_for_two_projects/results_for_human_activity_recognition/evaluation_confusion_matrix_for_test_set.png)
 
 
