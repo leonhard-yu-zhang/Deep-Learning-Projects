@@ -1,0 +1,235 @@
+absl-py @ file:///opt/conda/conda-bld/absl-py_1639803114343/work
+action-msgs==1.2.0
+action-tutorials-interfaces==0.20.2
+action-tutorials-py==0.20.2
+actionlib-msgs==4.2.2
+aiohttp @ file:///tmp/build/80754af9/aiohttp_1646806365504/work
+aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
+ament-cmake-test==1.3.2
+ament-copyright==0.12.4
+ament-cppcheck==0.12.4
+ament-cpplint==0.12.4
+ament-flake8==0.12.4
+ament-index-python==1.4.0
+ament-lint==0.12.4
+ament-lint-cmake==0.12.4
+ament-package==0.14.0
+ament-pep257==0.12.4
+ament-uncrustify==0.12.4
+ament-xmllint==0.12.4
+astor==0.8.1
+astunparse==1.6.3
+async-timeout @ file:///tmp/build/80754af9/async-timeout_1637851218186/work
+attrs @ file:///opt/conda/conda-bld/attrs_1642510447205/work
+blinker==1.4
+Bottleneck @ file:///opt/conda/conda-bld/bottleneck_1657175564434/work
+brotlipy==0.7.0
+builtin-interfaces==1.2.0
+cachetools @ file:///tmp/build/80754af9/cachetools_1619597386817/work
+certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
+cffi @ file:///opt/conda/conda-bld/cffi_1642701102775/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click @ file:///tmp/build/80754af9/click_1646056590078/work
+composition-interfaces==1.2.0
+cryptography @ file:///tmp/build/80754af9/cryptography_1652101588893/work
+cv-bridge==3.0.3
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+demo-nodes-py==0.20.2
+diagnostic-msgs==4.2.2
+dill==0.3.5.1
+distlib==0.3.5
+docker-pycreds==0.4.0
+domain-coordinator==0.10.0
+etils==0.6.0
+example-interfaces==0.9.3
+examples-rclpy-executors==0.15.0
+examples-rclpy-minimal-action-client==0.15.0
+examples-rclpy-minimal-action-server==0.15.0
+examples-rclpy-minimal-client==0.15.0
+examples-rclpy-minimal-publisher==0.15.0
+examples-rclpy-minimal-service==0.15.0
+examples-rclpy-minimal-subscriber==0.15.0
+filelock==3.7.1
+flatbuffers @ file:///home/ktietz/cip/python-flatbuffers_1634039120618/work
+fonttools==4.25.0
+frozenlist @ file:///tmp/build/80754af9/frozenlist_1637767113340/work
+gast @ file:///Users/ktietz/demo/mc3/conda-bld/gast_1628588903283/work
+geometry-msgs==4.2.2
+gin-config==0.5.0
+gitdb==4.0.9
+GitPython==3.1.27
+google-auth @ file:///opt/conda/conda-bld/google-auth_1646735974934/work
+google-auth-oauthlib @ file:///tmp/build/80754af9/google-auth-oauthlib_1617120569401/work
+google-pasta @ file:///Users/ktietz/demo/mc3/conda-bld/google-pasta_1630577991354/work
+googleapis-common-protos==1.56.4
+grpcio @ file:///tmp/build/80754af9/grpcio_1637590821884/work
+h5py @ file:///tmp/build/80754af9/h5py_1608649014695/work
+idna @ file:///tmp/build/80754af9/idna_1637925883363/work
+image-geometry==3.0.3
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1648544546694/work
+importlib-resources==5.8.0
+interactive-markers==2.3.2
+joblib @ file:///tmp/build/80754af9/joblib_1635411271373/work
+jsonschema==4.7.2
+Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
+kiwisolver @ file:///opt/conda/conda-bld/kiwisolver_1653292039266/work
+laser-geometry==2.4.0
+launch==1.0.2
+launch-ros==0.19.3
+launch-testing==1.0.2
+launch-testing-ros==0.19.3
+launch-xml==1.0.2
+launch-yaml==1.0.2
+lifecycle-msgs==1.2.0
+logging-demo==0.20.2
+map-msgs==2.1.0
+Markdown @ file:///tmp/build/80754af9/markdown_1614363852612/work
+matplotlib @ file:///tmp/build/80754af9/matplotlib-suite_1647441664166/work
+message-filters==4.3.2
+mkl-fft==1.3.1
+mkl-random @ file:///tmp/build/80754af9/mkl_random_1626186066731/work
+mkl-service==2.4.0
+more-itertools==8.13.0
+msgpack==1.0.4
+multidict @ file:///opt/conda/conda-bld/multidict_1640703752579/work
+munkres==1.1.4
+nav-msgs==4.2.2
+numexpr @ file:///opt/conda/conda-bld/numexpr_1656940300424/work
+numpy @ file:///opt/conda/conda-bld/numpy_and_numpy_base_1652801679809/work
+oauthlib==3.1.0
+opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
+osrf-pycommon==2.0.2
+packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
+pandas==1.4.3
+pathtools==0.1.2
+pcl-msgs==1.0.0
+pendulum-msgs==0.20.2
+Pillow==9.2.0
+platformdirs==2.5.2
+promise==2.3
+protobuf==3.20.1
+psutil==5.9.1
+pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+PyJWT @ file:///opt/conda/conda-bld/pyjwt_1657544592787/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+pyparsing @ file:///tmp/build/80754af9/pyparsing_1635766073266/work
+pyrsistent==0.18.1
+PySocks @ file:///tmp/build/80754af9/pysocks_1605305812635/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-qt-binding==1.1.1
+pytz @ file:///opt/conda/conda-bld/pytz_1654762638606/work
+PyYAML==6.0
+qt-dotgraph==2.2.1
+qt-gui==2.2.1
+qt-gui-cpp==2.2.1
+qt-gui-py-common==2.2.1
+quality-of-service-demo-py==0.20.2
+ray==1.13.0
+rcl-interfaces==1.2.0
+rclpy==3.3.4
+rcutils==5.1.1
+requests @ file:///opt/conda/conda-bld/requests_1657734628632/work
+requests-oauthlib==1.3.0
+resource-retriever==3.1.0
+rmw-dds-common==1.6.0
+ros2action==0.18.3
+ros2bag==0.15.2
+ros2cli==0.18.3
+ros2component==0.18.3
+ros2doctor==0.18.3
+ros2interface==0.18.3
+ros2launch==0.19.3
+ros2lifecycle==0.18.3
+ros2multicast==0.18.3
+ros2node==0.18.3
+ros2param==0.18.3
+ros2pkg==0.18.3
+ros2run==0.18.3
+ros2service==0.18.3
+ros2topic==0.18.3
+rosbag2-interfaces==0.15.2
+rosbag2-py==0.15.2
+rosgraph-msgs==1.2.0
+rosidl-adapter==3.1.3
+rosidl-cli==3.1.3
+rosidl-cmake==3.1.3
+rosidl-generator-c==3.1.3
+rosidl-generator-cpp==3.1.3
+rosidl-generator-py==0.14.2
+rosidl-parser==3.1.3
+rosidl-runtime-py==0.9.2
+rosidl-typesupport-c==2.0.0
+rosidl-typesupport-cpp==2.0.0
+rosidl-typesupport-fastrtps-c==2.2.0
+rosidl-typesupport-fastrtps-cpp==2.2.0
+rosidl-typesupport-introspection-c==3.1.3
+rosidl-typesupport-introspection-cpp==3.1.3
+rpyutils==0.2.1
+rqt-action==2.0.1
+rqt-bag==1.1.3
+rqt-bag-plugins==1.1.3
+rqt-console==2.0.2
+rqt-graph==1.2.1
+rqt-gui==1.1.4
+rqt-gui-py==1.1.4
+rqt-msg==1.0.6
+rqt-plot==1.1.2
+rqt-publisher==1.1.3
+rqt-py-common==1.1.4
+rqt-py-console==1.0.2
+rqt-reconfigure==1.0.8
+rqt-service-caller==1.0.5
+rqt-shell==1.0.2
+rqt-srv==1.0.3
+rqt-topic==1.2.3
+rsa @ file:///tmp/build/80754af9/rsa_1614366226499/work
+scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1642617106979/work
+scipy @ file:///tmp/build/80754af9/scipy_1641555004408/work
+seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
+sensor-msgs==4.2.2
+sensor-msgs-py==4.2.2
+sentry-sdk==1.7.2
+setproctitle==1.2.3
+shape-msgs==4.2.2
+shortuuid==1.0.9
+sip==4.19.13
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smmap==5.0.0
+sros2==0.10.4
+statistics-msgs==1.2.0
+std-msgs==4.2.2
+std-srvs==4.2.2
+stereo-msgs==4.2.2
+teleop-twist-keyboard==2.3.2
+tensorboard @ file:///home/builder/ktietz/aggregate/tensorflow_recipes/ci_te/tensorboard_1614593728657/work/tmp_pip_dir
+tensorboard-plugin-wit==1.6.0
+tensorflow @ file:///home/builder/ktietz/aggregate/tensorflow_recipes/ci_cpu/tensorflow-base_1614583966145/work/tensorflow_pkg/tensorflow-2.4.1-cp39-cp39-linux_x86_64.whl
+tensorflow-datasets==4.6.0
+tensorflow-estimator @ file:///home/builder/adipietro/tf/tensorflow-estimator_1630508970172/work/tensorflow_estimator-2.6.0-py2.py3-none-any.whl
+tensorflow-metadata==1.9.0
+termcolor==1.1.0
+tf2-geometry-msgs==0.25.0
+tf2-kdl==0.25.0
+tf2-msgs==0.25.0
+tf2-py==0.25.0
+tf2-ros-py==0.25.0
+tf2-tools==0.25.0
+threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
+toml==0.10.2
+topic-monitor==0.20.2
+tornado @ file:///tmp/build/80754af9/tornado_1606942317143/work
+tqdm==4.64.0
+trajectory-msgs==4.2.2
+turtlesim==1.4.2
+typing_extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
+unique-identifier-msgs==2.2.1
+urllib3 @ file:///opt/conda/conda-bld/urllib3_1650639997961/work
+virtualenv==20.15.1
+visualization-msgs==4.2.2
+wandb==0.12.21
+Werkzeug @ file:///opt/conda/conda-bld/werkzeug_1645628268370/work
+wrapt @ file:///tmp/abs_c335821b-6e43-4504-9816-b1a52d3d3e1eel6uae8l/croots/recipe/wrapt_1657814400492/work
+yarl @ file:///tmp/build/80754af9/yarl_1606939947528/work
+zipp @ file:///opt/conda/conda-bld/zipp_1652341764480/work
