@@ -11,6 +11,7 @@ from input_pipeline.preprocessing import preprocess, augment
 
 @gin.configurable
 def load(name, data_dir, n_classes, run_paths):
+    """ load image from path; modification of labels when binary classification; test/train/val split"""
     load.data_dir = data_dir
     if name == "idrid":
         logging.info(f"------------ Preparing dataset {name}... -----------")
@@ -31,9 +32,9 @@ def load(name, data_dir, n_classes, run_paths):
             return image, label
 
         # ---------- Test set ----------
-        path_test = data_dir + '/IDRID_dataset/images/test/'
+        path_test = os.path.join(data_dir, '/IDRID_dataset/images/test/')
         # get the image_label_mapping
-        image_label_mapping_test = pd.read_csv(data_dir + '/IDRID_dataset/labels/test.csv')[
+        image_label_mapping_test = pd.read_csv(os.path.join(data_dir, '/IDRID_dataset/labels/test.csv'))[
             ['Image name', 'Retinopathy grade']]
         # when binary classification, labels should be modified. Class 1 : labels 0,1; class 2: labels 2 and up
         if n_classes == 2:
@@ -41,18 +42,20 @@ def load(name, data_dir, n_classes, run_paths):
                 (image_label_mapping_test["Retinopathy grade"] > 1).astype(int)
         logging.info(f"Test set -\n"
                      f"{image_label_mapping_test['Retinopathy grade'].value_counts().sort_index().to_string()}")
-        # save to csv. When evaluating, class predictions of test images  will also be appended to this csv file
-        image_label_mapping_test.to_csv(os.path.join(run_paths['path_model_id'], 'image_label_prediction_mapping_test.csv'), index=False)
+        # save to csv. When evaluating, class predictions of test images will also be appended to this csv file
+        image_label_mapping_test.to_csv(os.path.join(run_paths['path_model_id'],
+                                                     'image_label_prediction_mapping_test.csv'), index=False)
         labels_test = image_label_mapping_test['Retinopathy grade']
         # image paths of test set
-        image_paths_test = [path_test + image_name + '.jpg' for image_name in image_label_mapping_test['Image name']]
+        image_paths_test = [os.path.join(path_test, image_name, '.jpg')
+                            for image_name in image_label_mapping_test['Image name']]
         # test set
         ds_test = tf.data.Dataset.from_tensor_slices((image_paths_test, labels_test)).map(load_image)
 
         # ---------- The full training set, which will be split into training/validation set ----------
-        path_train_full = data_dir + '/IDRID_dataset/images/train/'
+        path_train_full = os.path.join(data_dir, '/IDRID_dataset/images/train/')
         # get the image_label_mapping
-        image_label_mapping_train_full = pd.read_csv(data_dir + '/IDRID_dataset/labels/train.csv')[
+        image_label_mapping_train_full = pd.read_csv(os.path.join(data_dir, '/IDRID_dataset/labels/train.csv'))[
             ['Image name', 'Retinopathy grade']]
         # when binary classification, labels should be modified. Class 1 : labels 0,1; class 2: labels 2 and up
         if n_classes == 2:
@@ -147,6 +150,7 @@ def load(name, data_dir, n_classes, run_paths):
 
 @gin.configurable
 def prepare(ds_train, ds_val, ds_test, ds_info, batch_size, caching):
+    """prepare train/val/test set"""
     # Prepare training dataset
     ds_train = ds_train.map(
         preprocess, num_parallel_calls=tf.data.experimental.AUTOTUNE)

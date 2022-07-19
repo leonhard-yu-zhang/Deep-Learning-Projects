@@ -3,6 +3,7 @@ import datetime
 
 
 def gen_run_folder(path_model_id=''):
+    """generate the structure of the directory 'experiments"""
     run_paths  =dict()
 
     if not os.path.isdir(path_model_id):

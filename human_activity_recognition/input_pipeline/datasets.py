@@ -7,6 +7,7 @@ import os
 
 @gin.configurable
 def load(name, data_dir):
+    """ read and parse TFRecords to get datasets"""
     if name == "hapt":
         logging.info(f"------------ Preparing dataset {name}... -----------")
 
@@ -45,6 +46,7 @@ def load(name, data_dir):
 
 @gin.configurable
 def prepare(ds_train, ds_val, ds_test, batch_size, caching):
+    """prepare train/val/test dataset"""
     buffer_size = 0
     for _ in ds_train:
         buffer_size += 1

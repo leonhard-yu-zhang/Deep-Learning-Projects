@@ -2,7 +2,8 @@ import os
 import datetime
 
 
-def gen_run_folder(path_model_id=''):  # see the structure of the directory 'experiments'
+def gen_run_folder(path_model_id=''):
+    """generate the structure of the directory 'experiments"""
     run_paths = dict()
 
     if not os.path.isdir(path_model_id):  # True
@@ -49,6 +50,7 @@ def gen_run_folder(path_model_id=''):  # see the structure of the directory 'exp
 
 
 def save_config(path_gin, config):
+    """save configuration parameters"""
     with open(path_gin, 'w') as f_config:
         f_config.write(config)
 

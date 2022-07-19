@@ -19,10 +19,9 @@ class ConfusionMatrix(tf.keras.metrics.Metric):
             s.assign(tf.zeros(shape=s.shape))
 
     def update_state(self, y_true, y_pred):
-        # y_true: integer labels e.g. [0, 1];
-        # y_pred: already be transformed into integer labels in eval.py
-        # dtype=tf.float32 seems to be needed. Otherwise, there will be a Value Error:
-        # Tensor conversion requested dtype float32 for Tensor with dtype int32
+        """y_true: integer labels e.g. [0, 1]; y_pred: already be transformed into integer labels in eval.py
+           dtype=tf.float32 seems to be needed. Otherwise, there will be a Value Error:
+           Tensor conversion requested dtype float32 for Tensor with dtype int32"""
         confusion_matrix = tf.math.confusion_matrix(y_true, y_pred, dtype=tf.float32,
                                                     num_classes=self.n_classes)
         self.total_confusion_matrix.assign_add(confusion_matrix)

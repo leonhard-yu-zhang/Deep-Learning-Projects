@@ -1,12 +1,11 @@
 import gin
 import tensorflow as tf
 
-
-# Use a mask to crop the black edges in the image
 @tf.function
 def crop_image_from_gray(img, tol=7):
-    # inspired by https://www.kaggle.com/ratthachat/aptos-eye-preprocessing-in-diabetic-retinopathy
-    # but here aims to process tensors rather than numpy arrays
+    """Use a mask to crop the black edges in the image. Inspired by
+    https://www.kaggle.com/ratthachat/aptos-eye-preprocessing-in-diabetic-retinopathy.
+    But here aims to process tensors rather than numpy arrays"""
     # convert the original RGB image to grayscale
     img = tf.cast(img, tf.float32)
     gray_img = 0.2989*img[:, :, 0]+0.5870*img[:, :, 1]+0.1140*img[:, :, 2]
